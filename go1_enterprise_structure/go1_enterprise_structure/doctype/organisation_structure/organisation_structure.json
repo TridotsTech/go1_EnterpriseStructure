@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-23 15:18:55.141639",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_10me",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "organisation_type",
+  "parent_organisation_structure",
+  "organisation_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_10me",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Organisation Structure"
+  },
+  {
+   "fieldname": "parent_organisation_structure",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Parent Name",
+   "options": "Organisation Structure"
+  },
+  {
+   "fieldname": "organisation_type",
+   "fieldtype": "Select",
+   "label": "Organisation Level"
+  },
+  {
+   "fieldname": "organisation_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Organisation Name",
+   "options": "organisation_type"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2024-09-23 15:37:17.511987",
+ "modified_by": "Administrator",
+ "module": "Go1 Enterprise Structure",
+ "name": "Organisation Structure",
+ "nsm_parent_field": "parent_organisation_structure",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
