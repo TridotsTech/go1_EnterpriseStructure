@@ -6,7 +6,7 @@ frappe.ui.form.on("Worksite Structure", {
 		frm.set_df_property("worksite_name", "label", `${frm.doc.worksite_type} Name`)
 		// frm.refresh_field("worksite_name")
 		frappe.call({
-		    method:"chola_hrms.chola_hrms.api.get_worksite_levels",
+		    method:"go1_enterprise_structure.go1_enterprise_structure.api.get_worksite_levels",
 		    async:false,
 		    callback: function(r){
 		        frm.set_df_property('worksite_type', 'options', r.message)
@@ -27,7 +27,7 @@ frappe.ui.form.on("Worksite Structure", {
 	    frm.refresh_field('worksite_name')
 	    frm.refresh_field('parent_worksite_structure')
 	    frappe.call({
-		    method:"chola_hrms.chola_hrms.api.get_worksite_parents",
+		    method:"go1_enterprise_structure.go1_enterprise_structure.api.get_worksite_parents",
 		    args:{"worksite_type":frm.doc.worksite_type},
 		    async:false,
 		    callback: function(r){

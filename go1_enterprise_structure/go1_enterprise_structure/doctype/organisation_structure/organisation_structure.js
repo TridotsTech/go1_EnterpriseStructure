@@ -5,7 +5,7 @@ frappe.ui.form.on('Organisation Structure', {
 	refresh(frm) {
 		frm.set_df_property("organisation_name", "label", `${frm.doc.organisation_type} Name`)
 		frappe.call({
-		    method:"chola_hrms.chola_hrms.api.get_organisation_levels",
+		    method:"go1_enterprise_structure.go1_enterprise_structure.api.get_organisation_levels",
 		    async:false,
 		    callback: function(r){
 		        frm.set_df_property('organisation_type', 'options', r.message)
@@ -26,7 +26,7 @@ frappe.ui.form.on('Organisation Structure', {
 	    frm.refresh_field('organisation_name')
 	    frm.refresh_field('parent_organisation_structure')
 	    frappe.call({
-		    method:"chola_hrms.chola_hrms.api.get_organisation_parents",
+		    method:"go1_enterprise_structure.go1_enterprise_structure.api.get_organisation_parents",
 		    args:{"organisation_type":frm.doc.organisation_type},
 		    async:false,
 		    callback: function(r){
