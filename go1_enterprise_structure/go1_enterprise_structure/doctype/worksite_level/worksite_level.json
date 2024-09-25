@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "prompt",
  "creation": "2024-09-23 15:29:08.111422",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -26,10 +27,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-23 15:30:04.032938",
+ "modified": "2024-09-25 10:49:08.169975",
  "modified_by": "Administrator",
  "module": "Go1 Enterprise Structure",
  "name": "Worksite Level",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {
