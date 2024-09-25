@@ -10,6 +10,9 @@ frappe.ui.form.on('Organisation Structure', {
 		    method:"go1_enterprise_structure.go1_enterprise_structure.api.get_organisation_levels",
 		    async:false,
 		    callback: function(r){
+				if(r.message.length==0){
+					frappe.throw("Need to set <b>Organisation Level First</b>")
+				}
 		        frm.set_df_property('organisation_type', 'options', r.message)
 		    }
 		}),

@@ -10,7 +10,10 @@ frappe.ui.form.on("Worksite Structure", {
 		    method:"go1_enterprise_structure.go1_enterprise_structure.api.get_worksite_levels",
 		    async:false,
 		    callback: function(r){
-		        frm.set_df_property('worksite_type', 'options', r.message)
+				if(r.message.length==0){
+					frappe.throw("Need to set <b>Worksite Level First</b>")
+				}
+				frm.set_df_property('worksite_type', 'options', r.message)
 		    }
 		}),
 		frm.set_query("parent_worksite_structure", function(frm){
