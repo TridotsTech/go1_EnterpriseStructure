@@ -3,7 +3,9 @@
 
 frappe.ui.form.on('Organisation Structure', {
 	refresh(frm) {
-		frm.set_df_property("organisation_name", "label", `${frm.doc.organisation_type} Name`)
+		if(frm.doc.organisation_type){
+			frm.set_df_property("organisation_name", "label", `${frm.doc.organisation_type} Name`)
+		}
 		frappe.call({
 		    method:"go1_enterprise_structure.go1_enterprise_structure.api.get_organisation_levels",
 		    async:false,
@@ -20,7 +22,9 @@ frappe.ui.form.on('Organisation Structure', {
 		})
 	},
 	organisation_type(frm){
-		frm.set_df_property("organisation_name", "label", `${frm.doc.organisation_type} Name`)
+		if(frm.doc.organisation_type){
+			frm.set_df_property("organisation_name", "label", `${frm.doc.organisation_type} Name`)
+		}
 	    frm.set_value('organisation_name', "")
 	    frm.set_value('parent_organisation_structure', "")
 	    frm.refresh_field('organisation_name')

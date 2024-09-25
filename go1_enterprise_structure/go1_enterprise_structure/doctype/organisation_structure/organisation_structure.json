@@ -62,14 +62,14 @@
   {
    "fieldname": "organisation_name",
    "fieldtype": "Dynamic Link",
-   "label": "Organisation Name",
+   "label": "Name",
    "options": "organisation_type"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-09-25 10:48:47.129173",
+ "modified": "2024-09-25 10:57:02.920056",
  "modified_by": "Administrator",
  "module": "Go1 Enterprise Structure",
  "name": "Organisation Structure",

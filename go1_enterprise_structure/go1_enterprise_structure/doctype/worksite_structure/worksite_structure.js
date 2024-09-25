@@ -3,8 +3,9 @@
 
 frappe.ui.form.on("Worksite Structure", {
 	refresh(frm) {
-		frm.set_df_property("worksite_name", "label", `${frm.doc.worksite_type} Name`)
-		// frm.refresh_field("worksite_name")
+		if(frm.doc.worksite_type){
+			frm.set_df_property("worksite_name", "label", `${frm.doc.worksite_type} Name`)
+		}
 		frappe.call({
 		    method:"go1_enterprise_structure.go1_enterprise_structure.api.get_worksite_levels",
 		    async:false,
@@ -21,7 +22,9 @@ frappe.ui.form.on("Worksite Structure", {
 		})
 	},
 	worksite_type(frm){
-		frm.set_df_property("worksite_name", "label", `${frm.doc.worksite_type} Name`)
+		if(frm.doc.worksite_type){
+			frm.set_df_property("worksite_name", "label", `${frm.doc.worksite_type} Name`)
+		}
 	    frm.set_value('worksite_name', "")
 	    frm.set_value('parent_worksite_structure', "")
 	    frm.refresh_field('worksite_name')
