@@ -7,11 +7,11 @@
  "field_order": [
   "lft",
   "rgt",
-  "is_group",
   "old_parent",
   "worksite_type",
   "parent_worksite_structure",
-  "worksite_name"
+  "worksite_name",
+  "is_group"
  ],
  "fields": [
   {
@@ -39,6 +39,7 @@
   {
    "fieldname": "old_parent",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Old Parent",
    "options": "Worksite Structure"
   },
@@ -57,14 +58,14 @@
   {
    "fieldname": "worksite_name",
    "fieldtype": "Dynamic Link",
-   "label": "Name",
+   "label": "Worksite Name",
    "options": "worksite_type"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-09-25 10:57:23.574313",
+ "modified": "2024-09-25 15:26:08.440541",
  "modified_by": "Administrator",
  "module": "Go1 Enterprise Structure",
  "name": "Worksite Structure",

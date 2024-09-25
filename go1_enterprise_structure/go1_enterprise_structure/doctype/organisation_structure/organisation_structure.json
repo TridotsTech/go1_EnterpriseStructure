@@ -8,11 +8,11 @@
   "section_break_10me",
   "lft",
   "rgt",
-  "is_group",
   "old_parent",
   "organisation_type",
   "parent_organisation_structure",
-  "organisation_name"
+  "organisation_name",
+  "is_group"
  ],
  "fields": [
   {
@@ -44,6 +44,7 @@
   {
    "fieldname": "old_parent",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Old Parent",
    "options": "Organisation Structure"
   },
@@ -62,14 +63,14 @@
   {
    "fieldname": "organisation_name",
    "fieldtype": "Dynamic Link",
-   "label": "Name",
+   "label": "Organisation Name",
    "options": "organisation_type"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2024-09-25 10:57:02.920056",
+ "modified": "2024-09-25 15:26:28.879655",
  "modified_by": "Administrator",
  "module": "Go1 Enterprise Structure",
  "name": "Organisation Structure",

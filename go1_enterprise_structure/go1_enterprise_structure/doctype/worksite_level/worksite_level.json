@@ -1,11 +1,12 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
+ "autoname": "field:reference_doctype",
  "creation": "2024-09-23 15:29:08.111422",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "reference_doctype",
   "worksite_level",
   "color"
  ],
@@ -23,15 +24,22 @@
    "fieldtype": "Color",
    "in_list_view": 1,
    "label": "color"
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "Reference DocType",
+   "options": "DocType",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-25 10:49:08.169975",
+ "modified": "2024-09-25 15:25:14.734792",
  "modified_by": "Administrator",
  "module": "Go1 Enterprise Structure",
  "name": "Worksite Level",
- "naming_rule": "Set by user",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

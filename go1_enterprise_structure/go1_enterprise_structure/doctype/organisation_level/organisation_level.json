@@ -1,11 +1,12 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
+ "autoname": "field:reference_doctype",
  "creation": "2024-09-23 15:25:15.347525",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "reference_doctype",
   "organisation_level",
   "color"
  ],
@@ -23,15 +24,23 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Color"
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "Reference DocType",
+   "options": "DocType",
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-23 15:31:23.971491",
+ "modified": "2024-09-25 15:24:14.025898",
  "modified_by": "Administrator",
  "module": "Go1 Enterprise Structure",
  "name": "Organisation Level",
- "naming_rule": "Set by user",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
