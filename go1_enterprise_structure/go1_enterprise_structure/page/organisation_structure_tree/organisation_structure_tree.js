@@ -1,4 +1,4 @@
-frappe.pages['organization-structure-tree'].on_page_load = function(wrapper) {
+frappe.pages['organisation-structure-tree'].on_page_load = function(wrapper) {
 	// Create the page
 	var page = frappe.ui.make_app_page({
 		parent: wrapper,
