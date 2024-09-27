@@ -37,6 +37,8 @@ frappe.ui.form.on("Worksite Structure", {
 		    args:{"worksite_type":frm.doc.worksite_type},
 		    async:false,
 		    callback: function(r){
+				console.log("get_worksite_parents",r.message);
+				
 		        frm.set_query("parent_worksite_structure", function(frm){
         		    return {
         		        filters : {

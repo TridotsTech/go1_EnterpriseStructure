@@ -37,6 +37,8 @@ frappe.ui.form.on('Organisation Structure', {
 		    args:{"organisation_type":frm.doc.organisation_type},
 		    async:false,
 		    callback: function(r){
+				console.log("get_organisation_parents",r.message);
+				
 		        frm.set_query("parent_organisation_structure", function(frm){
         		    return {
         		        filters : {

@@ -9,7 +9,7 @@ def get_organisation_levels():
 
 @frappe.whitelist()
 def get_organisation_parents(organisation_type=None):
-	level = frappe.db.get_value("Organisation Level", organisation_type, 'organisation_level')
+	level = frappe.db.get_value("Organisation Level", organisation_type, ['organisation_level'])
 	if not level:
 		level = 0
 	else:
@@ -30,7 +30,7 @@ def get_worksite_levels():
 
 @frappe.whitelist()
 def get_worksite_parents(worksite_type=None):
-	level = frappe.db.get_value("Worksite Level", worksite_type, 'worksite_level')
+	level = frappe.db.get_value("Worksite Level", worksite_type, ['worksite_level'])
 	if not level:
 		level = 0
 	else:
