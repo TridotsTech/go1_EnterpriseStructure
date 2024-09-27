@@ -41,7 +41,7 @@ function loadScripts(scripts, callback) {
 	next();
 }
 function initializeChart() {
-	frappe.xcall("go1_enterprise_structure.go1_enterprise_structure.page.organization_structure_tree.organization_structure_tree.get_organisation_data")
+	frappe.xcall("go1_enterprise_structure.go1_enterprise_structure.page.organisation_structure_tree.organisation_structure_tree.get_organisation_data")
 		.then((r) => {
 			var chart ;
 			var dataFlattened = r;
